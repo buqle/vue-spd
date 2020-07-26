@@ -1,0 +1,248 @@
+
+.layout{
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  height: 100%;
+}
+.layout-breadcrumb{
+  padding: 10px 15px;
+  background-color: #fff;
+  height: 40px;
+}
+.layout-content{
+  min-height: 200px;
+  margin: 10px 0 10px 10px;
+  overflow: auto;
+  background: #fff;
+  border-radius: 4px;
+  height: calc(100% - 60px);
+}
+.layout-content-main{
+  padding: 10px;
+}
+.layout-copy{
+  text-align: center;
+  padding: 10px 0 20px;
+  color: #9ea7b4;
+}
+.layout-menu-left{
+  background: #fff;
+  height: 100%;
+  overflow: hidden;
+  border-right: solid 1px #dad9d9;
+  transition: all 0.2s ease-in-out 0s;
+  .layout-menu-left-sider{
+    height: 94%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-right: -18px;
+
+  }
+  .layout-menu-left-bottom{
+    height: 6%;
+  }
+}
+.layout-menu-right{
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #f5f7f9;
+}
+.layout-main-header{
+  height: 60px;
+  line-height: 60px;
+  /*display: flex;
+  flex-direction: row;*/
+  /*background:#515a6e;*/
+  background: #4fa1a3;
+}
+.layout-main-content{
+  height: calc(100% - 60px);
+  overflow: hidden;
+}
+.layout-logo-left{
+  width: 90%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 28px;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 3px;
+  margin: 15px auto;
+}
+.layout-ceiling-main {
+  a{
+    color: #9ba7b5;
+  }
+}
+.layout-hide-text {
+  .layout-text{
+    display: none;
+  }
+}
+.ivu-col{
+  transition: width .2s ease-in-out;
+}
+.ivu-row-flex{
+  height: 100%;
+}
+.ivu-menu-submenu-title{
+  padding: 14px;
+}
+.layout-logo{
+  height: 100%;
+  float:left;
+  .logo-img {
+    height: 100%;
+    img{
+      border-radius: 1px;
+      padding: 7px;
+      width: 129px;
+      height: 100%;
+    }
+  }
+}
+.layout-subject{
+  height: 100%;
+  float:left;
+  margin-left:7%;
+  .subject-img{
+    font-size:18px;
+    color:#fff;
+  }
+  ul.ivu-dropdown-menu{
+    height: 280px;
+    overflow-y: scroll;
+  }
+}
+.layout-user{
+  height: 100%;
+  float:right;
+  .user-img {
+    height: 100%;
+    line-height: 60px;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 15px;
+    img{
+      border-radius: 1px;
+      margin: 10px 0px 10px 10px;
+      width: 35px;
+      height: 100%;
+    }
+  }
+}
+.header-span{
+  cursor: pointer;
+}
+.drop-menu-span{
+  display: inline-block;
+  padding-left: 14px;
+}
+.ivu-select-dropdown {
+  .ivu-dropdown{
+    margin: 0px 12px 0px 0px;
+  }
+}
+._dropdownList{
+  width: 100%;
+  text-align: center;
+  /*margin-right: 25px;*/
+  margin-top: 22px;
+  /deep/.ivu-dropdown-rel{
+    width: 86%;
+  }
+}
+._iconCls{
+  width: 100%;
+  text-align: center;
+}
+.collapsed-width{
+  width:60px;
+  min-width: 60px;
+  max-width: 60px;
+  flex: 0 0 60px;
+}
+.normal-width{
+  width:226px;
+  width: 226px;
+  min-width: 226px;
+  max-width: 226px;
+  flex: 0 0 226px;
+}
+/*修改底层组件配色*/
+.layout-menu-left{
+  .ivu-menu-light.ivu-menu-vertical {
+    .ivu-menu-item-active{
+      &:not(.ivu-menu-submenu) {
+        color: #fff;
+        background: #4fa1a4;
+        z-index: 2
+      }
+    }
+  }
+}
+.layout-menu-left{
+  .ivu-menu-light.ivu-menu-vertical {
+    .ivu-menu-item-active{
+      &:not(.ivu-menu-submenu){
+        &:after {
+          content: '';
+          display: block;
+          width: 2px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          background: #4fa1a4;
+        }
+      }
+    }
+  }
+}
+.layout-menu-left {
+  .ivu-menu-vertical {
+    .ivu-menu-item {
+      /deep/&:hover {
+        background-color: #c4f6ef;
+        color: #1e777a;
+      }
+    }
+    .ivu-menu-submenu{
+      .ivu-menu-submenu-title {
+        /deep/&:hover {
+          background-color: #c4f6ef;
+          color: #1e777a;
+        }
+      }
+    }
+  }
+}
+
+/*修改底层组件配色*/
+
+.layout-main-header{
+  .ivu-select-dropdown{
+    z-index: 9999999;
+  }
+}
+.returnBtn{
+  padding-right: 10px;
+  cursor: pointer;
+}
+.svg-icon{
+  vertical-align: text-bottom;
+}
+.drop-menu-a{
+  display: inline-block;
+}

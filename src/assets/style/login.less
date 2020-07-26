@@ -1,0 +1,85 @@
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+  background: -webkit-linear-gradient(#4fa1a4, #4fa1a4ad);
+   .login-from{
+     margin-top: 2vh;
+     box-shadow:0px 1px 10px #3333335c;border-radius: 10px;
+    display: flex;justify-content: center;align-items: center;background: #fff;width:  860px;padding:40px 0;
+   }
+}
+
+.hexagon {
+  /*六边形：在长方形上面和下面各放置一个三角形
+  68、34  78
+  */
+  width: 70px;
+  height: 40px;
+  background: @theme-color;
+  position: relative;
+}
+
+.hexagon:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 20px solid @theme-color;
+}
+
+.hexagon:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 20px solid @theme-color;
+}
+
+.reject-warn-box {
+  width: 62px;
+  height: 60px;
+  display: inline-block;
+  color: #f00220;
+  font-size: 12px;
+  line-height: 80px;
+  text-align: center;
+  background: url("../../assets/image/warn_bg.png");
+  cursor: pointer;
+}
+.ivu-poptip-popper[x-placement^="bottom"] .ivu-poptip-arrow{
+  display: none;
+}
+.reject-warn-con {
+  white-space: normal;
+  h3 {
+    font-size: 14px;
+    color: red;
+    line-height: 40px;
+  }
+  .reject-warn-con-item {
+    display: flex;
+    .repo-img {
+      margin-right: 15px;
+      margin-top: 10px;
+      width: 31px;
+      height: 24px;
+      background: url("../../assets/image/warn_point.png");
+    }
+    .repo-con {
+      flex: 1;
+    }
+  }
+}
+

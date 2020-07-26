@@ -1,0 +1,117 @@
+@font:15px;
+@color:blue;
+
+// T2 代表 透明度20%
+// Type2 代表 同类型的 第二个颜色
+
+.changeTheme(@theme-color: #4FA1A3){
+	.csu-top{
+		height: 2px;
+		background-color: @theme-color;
+  }
+   .csu-topNav {
+ 	  	position: relative;
+	    left: 10%;
+	    width: 80%;
+	    height: 0;
+	    border-top: 30px solid @theme-color;
+	    border-right: 30px solid transparent;
+	    border-left: 30px solid transparent;
+	}
+
+  .csu-crumbs-nav{
+    position: relative;
+  	width: 94%;
+    height: 17px;
+    line-height: 22px;
+    padding-left: 6%;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: 20px solid @theme-color;
+    border-right: 18px solid transparent;
+    border-top: 0px solid transparent;
+    border-left: 18px solid transparent;
+    margin-left: 3%;
+  }
+
+ .csu-crumbs-nav:before{
+    display: inline-block;
+    position: absolute;
+    content: '';
+    top: -10px;
+    right: 0px;
+    width: 16%;
+    height: 10px;
+    border-bottom: 10px solid @theme-color;
+    border-right: 10px solid transparent;
+    border-top: 0px solid transparent;
+    border-left: 10px solid transparent;
+    margin-left: 79.8%;
+  }
+
+  .csu-crumbs-bottom{
+  	height: 3px;
+  	background-color:  @theme-color;
+  }
+}
+
+// .layout-theme(){
+
+//   -webkit-filter: hue-rotate(180deg)  saturate(50%) ;
+//   filter: hue-rotate(180deg)  saturate(50%);
+// }
+
+// 主体色
+@theme-color: #4FA1A3 ; // 绿色
+@theme-colorT2: rgba(79,161,164,0.2);
+@theme-colorT1: rgba(79,161,164,0.1); 
+
+
+// 辅助色
+@assist-Bcolor: #1196e4; // 蓝色 
+@assist-BcolorT5: rgba(17,150,228,0.5); 
+@assist-BcolorT1: rgba(17,150,228,0.1); 
+@assist-BcolorT05: rgba(17,150,228,0.05); 
+
+
+@blove-color: #00abdc; // 蓝色
+@blove-colorType1: #0673b2;
+@blove-colorType2: #4075ab;
+
+@green-color: #8dcc4e; // 绿色
+@green-colorType2: #859159;
+@green-colorType3: #76824a;
+@green-colorType4: #67733a;
+
+@red-color: #f00220; // 红色 
+
+@orange-color: #ff7202; // 橙色
+@orange-colorT1: rgba(255,114,2,0.1);
+
+// 黑色
+@black-color: #373737;
+@black-colorT2: rgba(55,55,55,0.2);
+
+@black-colorType2: #878787;  // #000000的透明度60%
+
+@black-colorType3: #afafaf;
+@black-colorType4: #c8c8c8;
+@black-colorType5: #e1e1e1;
+@black-colorType6: #ebebeb;
+
+
+ .theme1{
+   .changeTheme();//默认的样式
+ }
+ .theme2{
+   .changeTheme( #8b72b6 );
+ }
+ .theme3{
+   .changeTheme( #7487b7 );
+ }
+  .theme4{
+   .changeTheme( #72b68b );
+ }
+  .theme5{
+   .changeTheme( #86b672 );
+ }

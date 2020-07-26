@@ -1,0 +1,431 @@
+
+
+/*
+*
+*
+*
+*/
+*,html,body{
+
+}
+
+
+
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button,textarea {
+    /*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none; /*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "PingFang SC","Microsoft YaHei","微软雅黑";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse; /*合并外边线*/
+}
+
+body {
+    font: 12px/150%  "PingFang SC","Microsoft YaHei","微软雅黑";
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+}
+
+html{
+	height: 100%;
+}
+body{
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+
+}
+
+
+.csu-layout{
+      height: 100%;
+}
+
+
+.csu-footer{
+	position: absolute;
+	width: 100%;
+	background-color: #F5F5F5;
+	bottom: 0px;
+	height: 30px;
+	line-height: 30px;
+	font-size:  12px;
+
+	text-align: center;
+}
+
+
+ .csu-topNav .csu-topUl{
+ 	position: absolute;
+ 	top: -26px;
+    right: 0;
+ }
+
+ .csu-topNav .csu-topUl > li{
+ 	position: relative;
+ 	color: #fff;
+ 	float: right;
+ 	cursor: pointer;
+ 	width: 120px;
+ 	text-align: center;
+ }
+
+  .csu-topNav .csu-topUl > li:after{
+
+  	position: absolute;
+  	display: inline-block;
+  	content: '|';
+  	right: 3px;
+    top: 1px;
+  	width: 9px;
+  	height: 9px;
+  	color: #FFFFFF;
+  	transform:rotate(45deg);
+	  -ms-transform:rotate(45deg); 	/* IE 9 */
+	  -moz-transform:rotate(45deg); 	/* Firefox */
+	  -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+	  -o-transform:rotate(45deg);
+
+  }
+  .csu-topNav .csu-topUl > li:before{
+  	position: absolute;
+  	display: inline-block;
+  	content: '';
+  	width: 20px;
+  	height: 20px;
+  	background: url(../image/csu-icon.png) no-repeat 0 0;
+  }
+
+  .csu-topNav .csu-topUl > li:hover{
+    color: rgba(255,255,255,0.5) !important;
+  }
+  .csu-topNav .csu-topUl > li:hover:before{
+    opacity: 0.5;
+  }
+
+
+  /*../../../src/assets/image/csu-icon.png*/
+  .csu-topUl > li.csu-home{
+  	width: 94px;
+  }
+
+  .csu-topUl > li.csu-home:before{
+  	top: 2px;
+    left: 5px;
+  }
+
+ .csu-topUl > li.csu-society:before{
+  	top: 2px;
+    left: 8px;
+    background-position: 0 -46px;
+  }
+
+  .csu-topUl > li.csu-society:before{
+  	top: 2px;
+    left: 8px;
+    background-position: 0 -46px;
+  }
+
+  .csu-topUl > li.csu-serve:before{
+  	top: 2px;
+    left: 8px;
+    background-position: 0 -85px;
+  }
+
+  .csu-topUl > li.csu-news:before{
+  	top: 2px;
+    left: 5px;
+    background-position: 0 -137px;
+  }
+
+
+
+  .csu-topUl > li.csu-staff:before{
+  	top: 2px;
+    left: 6px;
+    background-position: 0px -190px;
+  }
+
+  .csu-topUl > li.csu-staff{
+  	width: 171px;
+  }
+
+  .csu-topUl > li.csu-staff:after{
+  	position: absolute;
+  	display: inline-block;
+  	content: '';
+  	right: 11px;
+    top: 0px;
+  	transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+
+  .csu-topUl > li.csu-news{
+  	width: 90px;
+  }
+
+
+  .csu-topUl > li.csu-news.unread:after{
+    position: absolute;
+    display: inline-block;
+    right: 23px;
+    top: 0;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background:  #EF0220;
+
+  }
+
+  .csu-topLogo{
+    position: relative;
+  	height: 50px;
+  }
+
+  .csu-logo{
+    position: absolute;
+    top: 20px;
+    left: 26px;
+  }
+  .csu-logo img{
+    width: 130px;
+    height: 47px;
+  }
+
+  .csu-crumbs{
+  	//height: 30px;
+  }
+
+  /*.csu-crumbs-top*/
+
+  .csu-crumbs-name{
+  	float: right;
+  	margin-right: 2%;
+  	font-size: 14px;
+  	font-weight: bold;
+    line-height: 15px;
+  }
+
+ /* 菜单*/
+.csu-layMenu{
+  position: relative;
+}
+
+ .csu-menu {
+  position: absolute;
+  color:#373737 ;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "PingFang SC","Microsoft YaHei","微软雅黑";
+  top: -58px;
+  left: 12%;
+ }
+ .csu-menu ul{
+
+ }
+  .csu-menu li{
+    cursor: pointer;
+    position: relative;
+    float: left;
+    width: 72px;
+    text-align: right;
+    margin-right: 17px;
+    padding-left: 38px;
+  }
+
+  .csu-menu li:before{
+    position:absolute;
+    content: '';
+    left: 7px;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    background: url(../image/csu-Micon.png) no-repeat 0 0;
+  }
+
+  .csu-menu li.save:before{
+    background-position:0 -156px;;
+  }
+
+   .csu-menu li.amend:before{
+    background-position:0 0;
+  }
+
+  .csu-menu li.rename:before{
+    background-position:0 -73px;
+  }
+
+  .condition {
+    width: auto;
+    height: auto;
+  }
+  .condition .condition-row {
+    width: auto;
+    height: 34px;
+    margin-top: 15px;
+  }
+  .condition .condition-row {
+    width: auto;
+    height: 34px;
+  }
+   .condition .condition-row .condition-group{
+    width: 33%;
+    height: 34px;
+    float: left;
+  }
+  .condition .condition-row .condition-group  .condition-group-ipt{
+    width: 80%;
+    margin-left: 10px;
+  }
+  .condition .condition-row .condition-group label{
+    text-align: left;
+  }
+  .condition-table{
+    margin-top: 15px;
+  }
+  .condition-page{
+    margin:15px 0 0 0;
+    text-align: right;
+  }
+/*loading 加载*/
+  .demo-spin-container{
+        position: relative;
+        border: 1px solid #eee;
+    }
+/*组件公共样式修改*/
+.btn-style{
+  margin-top: -10px;
+}
+.ivu-btn-primary {
+    color: #fff;
+    background-color: #4fa1a4 !important;
+    border-color: #4fa1a4 !important;
+}
+::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 6px !important; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 6px !important;
+    background: #ffffff !important;
+    cursor: pointer !important;
+}
+::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 5px !important;
+    -webkit-box-shadow: inset 0 0 5px rgba(240, 240, 240, .5) !important;
+    background: rgba(63, 98, 131, 0.8) !important;
+    cursor: pointer !important;
+}
+::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(240, 240, 240, .5) !important;
+    border-radius: 0 !important;
+    background: rgba(240, 240, 240, 0.5) !important;
+    cursor: pointer !important;
+}
+.ivu-btn {
+    color: #ffffff !important;
+    background-color: #4fa1a4 !important;
+    border-color: #dcdee2;
+}
+.ivu-message{/*message设置最外层显示，例如modal上*/
+  z-index:99999 !important;
+}
+/*列表统计汇总数据 样式*/
+.sum-style {
+     height: 34px;
+     line-height: 34px;
+     margin-bottom: 10px;
+}
+.sum-style h3{
+     font-size: 16px;
+     color: #4fa1a3;
+     float: left;
+}
+.sum-style h4{
+     font-size: 14px;
+     color: #4fa1a3;
+     float: right;
+}
+.sum-style h4 b{
+     color: red;
+     font-size: 18px;
+}
